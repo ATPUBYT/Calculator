@@ -1,0 +1,182 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 597
+  ClientWidth = 961
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object btn0: TButton
+    Left = 288
+    Top = 305
+    Width = 75
+    Height = 25
+    Caption = '0'
+    TabOrder = 0
+  end
+  object btn1: TButton
+    Left = 288
+    Top = 274
+    Width = 75
+    Height = 25
+    Caption = '1'
+    TabOrder = 1
+  end
+  object btnminus: TButton
+    Left = 531
+    Top = 274
+    Width = 75
+    Height = 25
+    Caption = '-'
+    TabOrder = 2
+  end
+  object btn2: TButton
+    Left = 369
+    Top = 274
+    Width = 75
+    Height = 25
+    Caption = '2'
+    TabOrder = 3
+  end
+  object btn3: TButton
+    Left = 450
+    Top = 274
+    Width = 75
+    Height = 25
+    Caption = '3'
+    TabOrder = 4
+  end
+  object btnequal: TButton
+    Left = 531
+    Top = 305
+    Width = 75
+    Height = 25
+    Caption = '='
+    TabOrder = 5
+  end
+  object btnreset: TButton
+    Left = 450
+    Top = 305
+    Width = 75
+    Height = 25
+    Caption = 'CE'
+    TabOrder = 6
+  end
+  object btncomma: TButton
+    Left = 369
+    Top = 305
+    Width = 75
+    Height = 25
+    Caption = ','
+    TabOrder = 7
+  end
+  object btn4: TButton
+    Left = 288
+    Top = 241
+    Width = 75
+    Height = 25
+    Caption = '4'
+    TabOrder = 8
+  end
+  object btn7: TButton
+    Left = 288
+    Top = 210
+    Width = 75
+    Height = 25
+    Caption = '7'
+    TabOrder = 9
+  end
+  object btndivide: TButton
+    Left = 531
+    Top = 210
+    Width = 75
+    Height = 25
+    Caption = '/'
+    TabOrder = 10
+  end
+  object btn8: TButton
+    Left = 369
+    Top = 210
+    Width = 75
+    Height = 25
+    Caption = '8'
+    TabOrder = 11
+  end
+  object btn9: TButton
+    Left = 450
+    Top = 210
+    Width = 75
+    Height = 25
+    Caption = '9'
+    TabOrder = 12
+  end
+  object btnplus: TButton
+    Left = 531
+    Top = 241
+    Width = 75
+    Height = 25
+    Caption = '+'
+    TabOrder = 13
+  end
+  object btn6: TButton
+    Left = 450
+    Top = 241
+    Width = 75
+    Height = 25
+    Caption = '6'
+    TabOrder = 14
+  end
+  object btn5: TButton
+    Left = 369
+    Top = 241
+    Width = 75
+    Height = 25
+    Caption = '5'
+    TabOrder = 15
+  end
+  object parenthesis0: TButton
+    Left = 288
+    Top = 179
+    Width = 75
+    Height = 25
+    Caption = '('
+    TabOrder = 16
+  end
+  object btnmultiply: TButton
+    Left = 531
+    Top = 179
+    Width = 75
+    Height = 25
+    Caption = '*'
+    TabOrder = 17
+  end
+  object parenthesis1: TButton
+    Left = 369
+    Top = 179
+    Width = 75
+    Height = 25
+    Caption = ')'
+    TabOrder = 18
+  end
+  object btnpercents: TButton
+    Left = 450
+    Top = 179
+    Width = 75
+    Height = 25
+    Caption = '%'
+    TabOrder = 19
+  end
+  object editDisplay: TEdit
+    Left = 288
+    Top = 144
+    Width = 318
+    Height = 23
+    TabOrder = 20
+    Text = 'editDisplay'
+  end
+end

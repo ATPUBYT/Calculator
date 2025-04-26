@@ -1,0 +1,89 @@
+#include <vcl.h>
+#pragma hdrstop
+#include "Unit1.h"
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+
+void __fastcall TForm1::ButtonClick(TObject *Sender)
+{
+    TButton *btn = dynamic_cast<TButton*>(Sender);
+    if (!btn) return;
+
+    editDisplay->Text += btn->Caption;
+}
+
+void __fastcall TForm1::OperationButtonClick(TObject *Sender)
+{
+    TButton *btn = dynamic_cast<TButton*>(Sender);
+    if (!btn) return;
+
+    firstNum = editDisplay->Text.ToDouble();
+    currentOperation = btn->Caption[1];
+    editDisplay->Text = "";
+}
+
+void __fastcall TForm1::EqualsButtonClick(TObject *Sender)
+{
+    double secondNum = editDisplay->Text.ToDouble();
+    double result = 0;
+
+    switch (currentOperation) {
+        case '+': result = firstNum + secondNum; break;
+        case '-': result = firstNum - secondNum; break;
+        case '*': result = firstNum * secondNum; break;
+        case '/':
+            if (secondNum != 0) {
+                result = firstNum / secondNum;
+            } else {
+                editDisplay->Text = "Error: Division by zero";
+                return;
+            }
+            break;
+        default:
+            editDisplay->Text = "Error: Invalid operation";
+            return;
+    }
+
+    editDisplay->Text = System::UnicodeString(result);
+}
+
+void __fastcall TForm1::ClearButtonClick(TObject *Sender)
+{
+    editDisplay->Text = "";
+    firstNum = 0;
+    currentOperation = '\0';
+}
+
+void __fastcall TForm1::DotButtonClick(TObject *Sender)
+{
+    if (editDisplay->Text.Pos(".") == -1) {
+        editDisplay->Text += ".";
+    }
+}
+
+__fastcall TForm1::TForm1(TComponent* Owner)
+    : TForm(Owner)
+{
+    firstNum = 0;
+    currentOperation = '\0';
+
+    // Присвоить обработчик события OnClick для всех кнопок
+    btn0->OnClick = ButtonClick;
+    btn1->OnClick = ButtonClick;
+    btn2->OnClick = ButtonClick;
+    btn3->OnClick = ButtonClick;
+    btn4->OnClick = ButtonClick;
+    btn5->OnClick = ButtonClick;
+    btn6->OnClick = ButtonClick;
+    btn7->OnClick = ButtonClick;
+    btn8->OnClick = ButtonClick;
+    btn9->OnClick = ButtonClick;
+    btnPlus->OnClick = OperationButtonClick;
+    btnMinus->OnClick = OperationButtonClick;
+    btnMultiply->OnClick = OperationButtonClick;
+    btnDivide->OnClick = OperationButtonClick;
+    btnEquals->OnClick = EqualsButtonClick;
+    btnC->OnClick = ClearButtonClick;
+    btnDot->OnClick = DotButtonClick;
+}
